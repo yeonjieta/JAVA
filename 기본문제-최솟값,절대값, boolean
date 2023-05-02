@@ -1,0 +1,62 @@
+package dailquiz2;
+
+import java.util.Scanner;
+
+public class ex_20230501 {
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+
+		// 1) 정수를 입력받아서 절대값을 출력하기 
+		int n;
+		System.out.print("정수 입력 : ");
+		n = Integer.parseInt(sc.nextLine());
+		if(n <0) {  
+			n = -n;  // n이 0보다 작으면 -n이므로 다시 -를 붙여주면 양의 정수가 되므로, 절대값 출력과 같다.
+		}
+		System.out.print("절대값 : " + n);
+		
+		// 2) 두 정수를 입력받아서 작은 값을 출력하기
+		int n1, n2, result;
+		System.out.print("정수 입력1 : ");
+		n1 = Integer.parseInt(sc.nextLine());
+		System.out.print("정수 입력2 : ");		
+		n2 = Integer.parseInt(sc.nextLine());
+		
+		if (n1 < n2) {
+			result = n1;
+		}
+		else {
+			result = n2;
+		}
+		System.out.print("작은값 : " + result);
+		
+		// 3) 세 정수를 입력받아서 가장 작은 값을 출력하기
+		int n3, n4, n5, min;
+		System.out.print("정수1 : ");
+		n3 = Integer.parseInt(sc.nextLine());
+		System.out.print("정수2 : ");
+		n4 = Integer.parseInt(sc.nextLine());
+		System.out.print("정수3 : ");
+		n5 = Integer.parseInt(sc.nextLine());
+		
+		min = n3;
+		if(min > n4) {
+			min = n4;
+		}
+		if(min > n5) {
+			min = n5;
+		}
+		System.out.println("최소값은? " + min);
+
+		
+		// 4) 정수의 범위가 1에서 20 사이에 포함되면 true, 아니면 false 출력하기
+		int n6;
+		boolean flag;
+		System.out.print("정수 : ");
+		n6 = Integer.parseInt(sc.nextLine());
+		flag = 1 <= n6 && n6 <= 20; // 1에서 20 사이에  해당하면 true 
+		System.out.println(flag); //  true or false로 출력한다.
+				
+	}
+
+}
