@@ -1,0 +1,41 @@
+package dailyquiz;
+
+import java.util.Scanner;
+
+public class Quiz_while {
+	public static void main(String[] args) {
+		// while을 활용하여 다음 문제를 풀어주세요
+		
+		// 1) Hello, world 를 3번만 출력하세요
+		int n1 = 0;				// 반복 횟수를 체크하기 위한 변수
+		while(n1 < 3) {			// 0부터 시작하여 3보다 작을 때까지 (3번 반복)
+			System.out.println("Hello, world");	// 먼저 출력하고
+			n1++;	// 증가는 나중에 한다
+		}
+		System.out.println();
+		
+		// 2) 1부터 20까지 한 줄에 띄어쓰기로 구분하여 출력하세요
+		int n2 = 1;
+		while(n2 <= 20) {
+			System.out.print(n2 + " ");  // 띄어쓰기로 구분하랬으니까 println 말고 print를 써주고 " " 빈칸 한 칸을 추가해준다. 
+			n2++;
+		}
+		System.out.println();
+		
+		// 3) A부터 Z까지 한 줄에 콤마로 구분하여 출력하세요
+		// 단, 마지막에는 콤마가 없어야 합니다
+		char ch = 'A';		// 65		// A부터 시작해서
+		while(ch <= 'Z') {	// 90		// Z가 될때 까지 반복하면서
+			System.out.print(ch);		// 글자를 출력하고
+			if(ch == 'Z') {				// 만약 글자가 Z이면(마지막이면)
+				System.out.print("\n");	// 줄을 바꾼다
+			}
+			else {						// 마지막 글자가 아니면
+				System.out.print(", ");	// 콤마를 찍고 줄을 바꾸지 않는다
+			}
+			ch++;	// 출력이 끝나면 다음 글자를 준비하기 위해 값을 1 증가시킨다
+		}
+		System.out.println();
+	}
+}
+		
