@@ -1,0 +1,41 @@
+package review;
+
+import java.util.Scanner;
+
+public class exer {
+	public static void main(String[] args) {
+		// userid와 userpw에 문자열을 입력받아서
+		// 1) 아이디 불일치
+		// 2) 아이디와 일치하지만, 패스워드 불일치
+		// 3) 아이디와 패스워드 모두 일치하여 로그인 성공
+		// 3개의 결과를 화면에 출력할 수 있는 코드를 작성하세요
+		
+		String id = "kongkong";
+		String pw = "duswl";
+		
+		Scanner sc = new Scanner(System.in);
+		String userid, userpw;
+		
+		System.out.print("ID 입력 : ");
+		userid = sc.nextLine();
+		System.out.print("PW 입력 : ");
+		userpw = sc.nextLine();
+
+		
+		// 1) 아이디 불일치
+		if(userid.equals(id)) { // userid 가 id와 같다면
+			// 입력값을 앞으로 배치, 내가 입력하기 때문에 null일수가 없음. 하지만 컴터가 갖고 있는 값은 null일가능성도 있기 때문에
+			// . 연산자 앞에는 null 이 오면 안돼
+			if(userpw.equals(pw)) { // userpw 가 pw와 같다면 
+				System.out.println("로그인 성공");  
+			}
+			else {                  // userpw 가 pw와 같지않다면 
+				System.out.println("패스워드 불일치");
+			}
+		}
+		else { // userid 가 id와 같지않다면
+			System.out.println("아이디 불일치");
+		}
+	sc.close();
+	}
+}
